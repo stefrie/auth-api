@@ -17,8 +17,8 @@ authRouter.post('/signup', async (req, res, next) => {
     };
     res.status(201).json(output);
   } catch (e) {
-    next(e.message)
-  }
+    next(e.message);
+  };
 });
 
 authRouter.post('/signin', basicAuth, (req, res, next) => {
